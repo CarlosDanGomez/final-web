@@ -1,3 +1,5 @@
+import './Boton-Menu.css'
+
 function BotonMenu () {
 
 }

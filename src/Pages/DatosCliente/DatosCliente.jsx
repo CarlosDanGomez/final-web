@@ -1,11 +1,11 @@
 import Menu from "../../Components/Shared/Menu"
 import DatosPersona from "../../Components/Shared/DatosPersona"
 
-function DatosAdmon () {
+function DatosCliente () {
     return(<>
     <Menu/>
     <DatosPersona/>
     </>)
 }
 
-export default DatosAdmon
+export default DatosCliente

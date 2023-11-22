@@ -1,21 +1,39 @@
-import logo from './logo.svg';
-import React from 'react';
+
 import './App.css';
-import Index from './Pages/Index/Index';
-import Nosotros from './Pages/Nosotros/Nosotros';
-import NuestroProducto from './Pages/Nuestro-producto/Nuestro-producto';
-import CargarProducto from './Pages/CargarProducto/CargarProducto';
-import Carrito from './Pages/Carrito/Carrito';
-import DatosAdmon from './Pages/DatosAdmon/DatosAdmon';
-import DatosCliente from './Pages/DatosCliente/DatosCliente';
-import Galeria from './Pages/Galeria/Galeria';
-import Tienda from './Pages/Tienda/Tienda';
+import Navbar from './components/Navbar';
+import Home from "./pages/Home"
+import Galeria from './pages/Galeria';
+import Nosotros from './pages/Nosotros';
+import NuestroProducto from './pages/NuestroProducto';
+import Tienda from './pages/Tienda';
+import Cart from "./pages/Cart"
+import Pagar from './pages/Pagar';
+import Subir from './pages/Subir';
+import {BrowserRouter, Routes, Route} from "react-router-dom"
 
 function App() {
+
   return (
-    <div className="App">
-      <Index/>
-    </div>
+    
+    <div className="App"> 
+
+
+    <BrowserRouter>
+    <Navbar></Navbar>
+    <Routes>
+      <Route index element={<Home/>}></Route>
+      <Route path="/galeria" element={<Galeria/>}></Route>
+      <Route path="/nosotros" element={<Nosotros/>}></Route>
+      <Route path="/nuestroproducto" element={<NuestroProducto/>}></Route>
+      <Route path="/tienda" element={<Tienda/>}></Route>
+      <Route path="/cart" element={<Cart/>}></Route>
+      <Route path="/pagar" element={<Pagar/>}></Route>
+      <Route path="/Subir" element={<Subir/>}></Route>
+      
+    </Routes>
+    </BrowserRouter>
+
+ </div>
   );
 }
 
